@@ -12,5 +12,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: linkerd
+        namespace: linkerd
   values:
     installNamespace: false
