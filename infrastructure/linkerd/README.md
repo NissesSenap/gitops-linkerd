@@ -1,6 +1,6 @@
 # Generate Linkerd v2 certificates
 
-Install the step CLI on MacOS and Linux using Homebrew run:
+Install the [step CLI](https://smallstep.com/docs/step-ca/installation) on MacOS and Linux using Homebrew run:
 
 ```sh
 brew install step
@@ -29,6 +29,6 @@ Generate a Kubernetes secret with the Linkerd certs:
 ```sh
 kubectl -n linkerd create secret generic linkerd-certs \
 --from-file=ca.crt --from-file=issuer.crt \
---from-file=issuer.key -oyaml --dry-run=client \
+--from-file=issuer.key -oyaml --dry-run=true \
 > linkerd-certs.yaml
 ```
