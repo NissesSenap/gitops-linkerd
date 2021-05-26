@@ -7,6 +7,10 @@ metadata:
 spec:
   dependsOn:
     - name: linkerd
+  healthChecks:
+    - kind: Deployment
+      name: prometheus
+      namespace: linkerd-viz
   interval: 1m0s
   path: ./infrastructure/linkerd-viz
   prune: true
